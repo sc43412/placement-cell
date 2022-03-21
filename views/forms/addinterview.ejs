@@ -1,0 +1,19 @@
+<!-- add interview form  -->
+<form action="/interview/create" method="POST">
+    <h1>Schedule Interview</h1>
+    <input type="text" name="role" placeholder="Role*" required>
+    <select name="student" >
+        <%for(let ninja of student){%>
+            <option value="<%= ninja.id%>"><%= ninja.name %></option>
+        <%}%>
+    </select>
+    <select name="company" >
+        <%for(let org of company){%>
+            <option value="<%= org.id%>"><%= org.name %></option>
+        <%}%>
+    </select>
+    <input type="datetime-local" name="date" placeholder="Interview on*" required>
+    <input type="hidden" name="result" value="Interview Scheduled">
+    <button value="scheduleInterview" class="submit">Schedule</button>
+    <a href="/">Back</a>
+</form>

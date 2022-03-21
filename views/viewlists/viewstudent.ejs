@@ -1,0 +1,36 @@
+<h1>Students</h1>
+
+<!-- list the details of all student -->
+<div class="flex">
+    <%for(let student of students){%>
+        <div class="item">
+            <!-- student details  -->
+            <h2><%= student.name %></h1>
+            <p>Email- <%= student.email %></p>
+            <p>Batch- <%= student.batch.name %></p>
+            <p>Data Structures & Algorithm- <%= student.dsa %>%</p>
+            <p>Web Development- <%= student.web %>%</p>
+            <p>React- <%= student.react %>%</p>
+            
+            <!-- id student placed showl placed word in green color and show achivement batch  -->
+            <% if(student.status=='Placed'){%>
+                <h3 style="color: rgb(31, 214, 31);"><%=student.status%></h3>
+                <img class="submit" src="https://cdn4.iconfinder.com/data/icons/seo-web-29/24/Badge-512.png" alt="">
+            <%}else{%>
+
+                <!-- if student is notb placed give option to change the status  -->
+                <h3 style="color: rgb(250, 190, 100);"><%=student.status%></h3>
+                <form class="updateform" action="/student/update" method="post">
+                    <input type="hidden" name="id" value="<%=student.id%>">
+                    <select class="green" id="select-status" name="status" onchange="this.form.submit()">
+                        <option  selected="" disabled>Change Status</option>
+                      <option value="Placed">Placed</option>
+                      <option value="Not Placed">Not placed</option>
+                      <option value="Status Unknown">Status Unknown</option>
+                  </select>
+                </form>
+            <%}%>
+
+        </div>
+    <%}%>
+</div>

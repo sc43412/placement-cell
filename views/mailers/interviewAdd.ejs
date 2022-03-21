@@ -1,0 +1,19 @@
+
+<!-- template to be used if interview is scheduled and send email inthis format -->
+<div>
+    <p>Hi <%= interview.student.name %>!</p>
+    <br>
+    <strong>Hurray !!! Your Interview has been scheduled.</strong>
+    <p> You are invited for an online Interview by <%= company %> for the position of <%= interview.role%>. Your Details are as follows,</p>
+    <p>Profile- <strong><%= interview.role %></strong></p>
+    <p>Company- <strong><%= company %></strong></p>
+    <p>Scheduled on- <strong><%= interview.date %></strong></p>
+    <img src="https://www.birthdaywishes.expert/wp-content/uploads/2015/01/good-luck-on-your-interview-6.jpg" alt="">
+    <p>The login credentials are sent to you in a separate email. Please check your junk folder in case if you don’t find it in your inbox.</p>
+    <p>If you have any queries, please feel free to reach <strong style="color: red;">learningdemo068@gmail.com</strong> </p>
+    <br>
+    <p>All the Best!!!</p>
+    <br>
+    <p>Thanks,</p>
+    <p>Placement Cell Team</p>
+</div>

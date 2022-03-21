@@ -1,0 +1,30 @@
+<h1>Scheduled Interviews</h1>
+
+
+<!-- ist of schedules interviews along with details and option to edit status  -->
+<div class="flex">
+    <%for(let interview of interviews){%>
+        <div class="item">
+            <h1><%= interview.role %></h1>
+            <p><%= interview.student.name %></p>
+            <p><%= interview.company.name %></p>
+            <p><%= interview.date.toString().split("GMT")[0] %></p>
+            <% if(interview.result=="Rejected"){%>
+                <h3 style="color: rgb(255, 0, 0);"><%=interview.result%></h3>
+            <%}else{%>
+                <h3 style="color: rgb(83, 255, 41);"><%=interview.result%></h3>
+            <%}%>
+            <form class="updateform" action="/interview/update" method="post">
+                <input type="hidden" name="id" value="<%=interview.id%>">
+                <input type="hidden" name="student" value="<%= interview.student.id%>">
+                <select class="green" id="select-status" name="result" onchange="this.form.submit()">
+                    <option  selected="" disabled>Change Status</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                    <option value="Status Pending">Status Pending</option>
+                    <option value="Interview Scheduled">Interview Scheduled</option>
+              </select>
+            </form>
+        </div>
+    <%}%>
+</div>

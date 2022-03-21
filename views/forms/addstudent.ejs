@@ -1,0 +1,22 @@
+<!-- add student form  -->
+<form action="/student/create" method="POST">
+    <h1>Create Student</h1>
+    <input type="text" name="name" placeholder="Student Name*" required>
+    <input type="text" name="college" placeholder="College Name*" required>
+    <select name="status" id="">
+        <option value="Placed">Placed</option>
+        <option value="Not Placed" selected>Not Placed</option>
+        <option value="Status Unknown">Status unknown</option>
+    </select>
+    <select name="batch" >
+        <%for(let batch of batches){%>
+            <option value="<%= batch.id%>"><%= batch.name %></option>
+        <%}%>
+    </select>
+    <input type="email" name="email" placeholder="Email*" required>
+    <input type="text" name="dsa" placeholder="DSA Score*" required>
+    <input type="text" name="web" placeholder="Web Developement Score*" required>
+    <input type="text" name="react" placeholder="React Score*" required>
+    <button value="scheduleInterview" class="submit">create</button>
+    <a href="/">Back</a>
+</form>

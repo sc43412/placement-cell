@@ -1,0 +1,54 @@
+<!-- if users is signed in then show navigation buttons else keep an empty window along with sign in sign up buttons  -->
+<% if (_locals.user){ %>
+    <div class="flex">
+        <!-- create student feature  -->
+        <a href="/student/add">
+            <div class="dash">
+                <img class="dashImg" src="https://classroomclipart.com/images/gallery/Animations/General/sleep_6_28.gif" alt="Student Gif">
+                <button class="submit">Create Student</button>
+            </div>
+        </a>
+        <!-- craete interview feature  -->
+        <a href="/interview/add">
+            <div class="dash">
+                <img class="dashImg" src="https://cdn.dribbble.com/users/2054054/screenshots/6257329/interview.gif" alt="interview Gif">
+                <button class="submit">Schedule Interview</button>
+            </div>
+        </a>
+        <!-- post jopb feature  -->
+        <a href="/job/add">
+            <div class="dash">
+                <img class="dashImg" src="https://gifimage.net/wp-content/uploads/2017/10/business-gif-10.gif" alt="Job Gif">
+                <button class="submit">Post Job</button>
+            </div>
+        </a>
+        <!-- create batch feature  -->
+        <a href="/batch/add">
+            <div class="dash">
+                <img class="dashImg" src="https://cdn.dribbble.com/users/753807/screenshots/5415673/people.gif" onerror="this.onerror=null; this.src='/images/batch.jpg'" alt="Batch Gif">
+                <button class="submit">Create Batch</button>
+            </div>
+        </a>
+        <!-- create company  -->
+        <a href="/company/add">
+            <div class="dash">
+                <img class="dashImg" src="https://www.brunswickgroup.com/media/6239/customer_focused_gif_final.gif" alt="Company Gif">
+                <button class="submit">Create Company</button>
+            </div>
+        </a>
+            
+    </div>
+<% }else{ %>
+    <!-- if user is not logged show them sign in sign up buttons  -->
+    <h1 style="letter-spacing: 5px;">Welcome to  Placement Cell!!!</h1>
+    <br><br>
+    <p>Please Login to Proceed further</p>
+    <button type="button" class="submit">
+            <a href="/users/signIn">Sign In</a>
+    </button>
+    <button type="button" class="submit">
+            <a href="/users/signUp">Sign Up</a>
+    </button>
+    
+    <!-- <a href="/users/auth/google"><button class="submit"><i class="fab fa-google-plus-g"></i>Google SinIn/Sign Up</button></a> -->
+<% } %>

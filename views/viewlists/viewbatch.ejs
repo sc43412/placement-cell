@@ -1,0 +1,11 @@
+<h1>Batches</h1>
+
+<!-- view all list of batch along with cordintaor  -->
+<div class="flex">
+    <%for(let batch of batches){%>
+        <div class="item">
+            <h1><%= batch.name %></h1>
+            <p>Batch Cordinator - <%= batch.cordinator %></p>
+        </div>
+    <%}%>
+</div>

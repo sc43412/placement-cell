@@ -1,0 +1,19 @@
+<!-- this temnplate used to send email when student is created in application  -->
+<div>
+    <p>Hi <%= user.name %>!</p>
+    <br>
+    <p>Your profile for Placement Cell application has been Created by placement cell Team. Your Details are as follows,</p>
+    <p>Name- <strong><%= user.name %></strong></p>
+    <p>Email- <strong><%= user.email %></strong></p>
+    <p>Batch- <strong><%= user.batch.name %></strong></p>
+    <p>Cordinator- <strong><%= user.batch.cordinator %></strong></p>
+    <p>College- <strong><%= user.college %></strong></p>
+    <p>DSA Score- <strong><%= user.dsa %>%</strong></p>
+    <p>Web Score- <strong><%= user.web %>%</strong></p>
+    <p>React Score- <strong><%= user.react %>%</strong></p>
+    <img src="https://docs.cidaas.com/assets/create%20user%20successfull.PNG" alt="">
+    <p>If you run into problems, please contact support by reaching <strong style="color: red;">learningdemo068@gmail.com</strong> </p>
+    <br>
+    <p>Thanks,</p>
+    <p>Placement Cell Team</p>
+</div>

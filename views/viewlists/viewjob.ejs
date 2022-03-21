@@ -1,0 +1,13 @@
+<h1>Jobs</h1>
+<!-- view list of all jobs along with details and apply link  -->
+<div class="flex"  >
+    <%for(let job of jobs){%>
+        <div class="item">
+            <h2><%= job.role %></h1>
+            <p><%= job.company %></p>
+            <p>Salary- <%= job.ctc %></p>
+            <a href="<%= job.link %>"><button value="scheduleInterview" class="submit">Apply</button></a>
+            <a id="morejd" href="/job/details/<%= job.id %>">More Details</a>
+        </div>
+    <%}%>
+</div>
