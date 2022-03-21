@@ -7,7 +7,7 @@ his/her interview is scheduled. Team can download the students data
 in scv format once needed. Csv file includes students all data 
 along with interview attended wiyh its status.
 This app is also hosted thought Heroku on 
-https://ninja-placement-cell.herokuapp.com/
+https://placed-ui-new.herokuapp.com/
 
 
 ## How to setup on local machine
@@ -23,7 +23,7 @@ To use this repository your machine should have node, npm, monogodb and git.
 ```
 2.Clone the project
 ```bash
-  git clone https://github.com/pradeep-thombre/AdminUI.git
+  git clone https://github.com/sc43412/placement-cell.git
 ```
 
 3.Change directory to root folder
@@ -46,5 +46,5 @@ To use this repository your machine should have node, npm, monogodb and git.
 
 ## Authors
 
-- [@pradeepthombre](https://github.com/pradeep-thombre)
+- SAURAV CHATTERJEE
 
