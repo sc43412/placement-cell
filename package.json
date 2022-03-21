@@ -4,7 +4,8 @@
   "description": "This is an application that can be used by a placement department  which will maintain the data of students and also schedule thire  interviews. An interview mail sends automatically to students once his/her interview is scheduled. Team can download the students data  in scv format once needed. Csv file includes students all data  along with interview attended wiyh its status. This app is also hosted thought Heroku on  https://ninja-placement-cell.herokuapp.com/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
   },
   "author": "saurav",
   "license": "ISC",
